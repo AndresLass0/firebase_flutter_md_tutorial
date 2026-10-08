@@ -272,7 +272,7 @@ void main() async {
 }
 ```
 
-### ¿Qué hace esta parte?
+### ¿Como funciona?
 
 ```dart
 WidgetsFlutterBinding.ensureInitialized();
@@ -302,7 +302,59 @@ Inicia la aplicación normalmente.
 
 ---
 
-## 8. Probar la aplicación
+
+## 8. Agregar Firebase Authentication
+
+Después de configurar Firebase Core, podemos agregar Firebase Authentication para manejar el registro e inicio de sesión de los usuarios de la aplicación.
+
+###  Agregar Firebase Authentication
+
+Desde la carpeta del proyecto Flutter:
+
+```bash
+flutter pub add firebase_auth
+```
+
+Podemos comprobar que se agregó correctamente con:
+
+```bash
+flutter pub deps | grep firebase_auth
+```
+
+También aparecerá en el archivo `pubspec.yaml`:
+
+```yaml
+firebase_auth: ^6.x.x
+```
+
+> La versión exacta puede variar dependiendo de la versión disponible al momento de ejecutar el comando.
+
+
+
+### Importar Firebase Authentication en Flutter
+
+En los archivos donde se vaya a utilizar Authentication debemos importar:
+
+```dart
+import 'package:firebase_auth/firebase_auth.dart';
+```
+Firebase proporciona una instancia para trabajar con la autenticación:
+
+```dart
+final FirebaseAuth auth = FirebaseAuth.instance;
+```
+
+A través de esta instancia podemos realizar diferentes operaciones:
+
+- Registrar usuarios.
+- Iniciar sesión.
+- Cerrar sesión.
+- Recuperar contraseñas.
+- Consultar el usuario actualmente autenticado.
+
+---
+
+## 9. Probar la aplicación
 
 Con la configuración terminada se puede ejecutar:
 
@@ -335,7 +387,36 @@ firebase_core: ^4.15.0
 
 Con esto queda lista la **configuración básica de Firebase en Flutter**.
 
-Los servicios específicos, como Authentication, Firestore, Storage, etc., se configuran posteriormente según lo que necesite la aplicación.
+Los servicios específicos, como Authentication, Firestore, etc., se configuran posteriormente según lo que necesite la aplicación.
 
 
 
+Aqui unas pruebas del programa funcionando con Authenticator de Firebase:
+
+
+
+#### Iniciando Sesion con Credenciales correctas :
+![Captura 6](captura_6.png)
+
+---
+
+
+#### Registrar un usuario Nuevo
+![Captura 8](captura_8.png)
+
+---
+
+#### Revisando FireBase que esta creado
+![Captura 8](captura_8.png)
+
+---
+
+#### Inicio de Sesion con Usuario Nuevo
+![Captura 9](captura_9.png)
+
+---
+
+#### Cambiando Contraseña 
+![Captura 10](captura_10.png)
+
+---
