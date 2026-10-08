@@ -395,7 +395,7 @@ Aqui unas pruebas del programa funcionando con Authenticator de Firebase:
 
 
 
-#### Iniciando Sesion con Credenciales correctas :
+#### Iniciando Sesion con Credenciales correctas
 ![Captura 6](captura_6.png)
 
 ---
@@ -406,10 +406,12 @@ Aqui unas pruebas del programa funcionando con Authenticator de Firebase:
 
 ---
 
-#### Revisando FireBase que esta creado
-![Captura 8](captura_8.png)
+
+#### Revisando el nuevo usuario en FireBase
+![Captura 7](captura_7.png)
 
 ---
+
 
 #### Inicio de Sesion con Usuario Nuevo
 ![Captura 9](captura_9.png)
